@@ -9,6 +9,7 @@ Task 1
 - Always keep software fully patched and up to date. For any input parameters, be sure to sanitize inputs to prevent these sorts of injection-based attacks.
 
 Task 2
+
 A sample incident response plan might include the following:
 - Activate the incident response team and the designated managers. This team should provide notification whenever possible throughout this process to the relevant stakeholders.
 - The IR team should disconnect any affected systems from the internet and shut them down if necessary. The affected systems should be isolated from other endpoints and services to the extent possible.
@@ -18,6 +19,7 @@ A sample incident response plan might include the following:
 - Perform a blameless post-mortem to review the relevant facts of the matter, identify improvements in processes and help harden the company's security posture, and implement the lessons learned to prevent future attacks.
 
 Task 3
+
 Possible network security measures may include: 
 - Intrusion Detection / Prevention Systems: IDS are used to scan resources and alert on potential signs of compromise, while IPS work to prevent intrusion in the first place. 
 - Code / container scans: These happen before code or containers are deployed to make sure there are no vulnerabilities in dependencies or the code or containers themselves. 
@@ -28,6 +30,7 @@ Possible network security measures may include:
 Part II
 
 Task 1 
+
 Docker container security best practices include: 
 1. Do not pull base images from insecure registries like Docker Hub, but instead use hardened images from secure registries like Iron Bank
 2. Choose a minimalist / secure image as a base, and keep it and all packages up to date throughout the container’s lifetime
@@ -41,6 +44,7 @@ See the Dockerfile in this repo. Please note that this is just a sample for illu
 - Running as a nonroot user 
 
 Task 2 
+
 The following are three examples of Kubernetes security features.
 1. Role-based access controls (RBAC): This is a way of locking down privileges in a cluster by defining what actions users or service accounts can perform on which resources.
 2. Network policies: This is a way of shaping traffic within a cluster by defining which pods can communicate with other entities, as well as information like the ports and protocols used.
@@ -49,20 +53,24 @@ The following are three examples of Kubernetes security features.
 See pod.yaml in this repo for an example of security contexts in use. 
 
 Task 3
+
 Infrastructure as a Service (IaaS) refers to the provisioning of compute resources (including compute, storage, networking tools, and more) on an on-demand basis. Since users themselves are responsible for the configuration of these infrastructure resources, the majority of the burden is on them to ensure that there are no security misconfigurations in the resources, and that other security best practices surrounding matters like authentication and encryption are followed.     
 
 
 Part III
 
 Task 1
+
 See the ansible-playbook.yaml file in this repo. 
 Enter the IP address in the hosts section prior to running.
 Note this is a simple playbook, but for more complex tasks a role should be used. 
 
 Task 2
+
 N/A
 
 Task 3
+
 See the .github/workflows/lambda.yaml file in this repo.
 Please note that the S3_BUCKET and REGION environment variables must be set before running. 
 The AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY secrets must also be set with valid credentials prior to running.
