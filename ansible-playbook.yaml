@@ -1,0 +1,21 @@
+- name: Install Web Server
+  hosts: 1.2.3.4 #Enter the IP or address of the host here
+  become_user: root
+  become: true
+
+  tasks:
+  - name: Update packages
+    ansible.builtin.apt:
+      name: "*"
+      state: latest
+
+  - name: Install HTTPD 
+    ansible.builtin.package:
+      name: httpd
+      state: present
+
+  - name: Start HTTPD service
+    ansible.builtin.service:
+      name: httpd
+      state: started
+      enabled: yes
